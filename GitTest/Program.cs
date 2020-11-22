@@ -19,8 +19,14 @@ namespace GitTest
             {
                 flag = new ConsoleManagment().GetIntegerInputParamets(out int result);
                 parametrA = result;
+                if(parametrA == 0)
+            {
+                    Console.WriteLine("ParamtrA is equal 0, korney ne budet , try again");
+                    flag = false;
+                }
             }
             while (!flag);
+                    
             Console.WriteLine("Please input parametr B:");
             int parametrB = 0;
             do
@@ -37,6 +43,20 @@ namespace GitTest
                 parametrC = result;
             }
             while (!flag);
+            float parametrD = (parametrB * parametrB) - (4 * parametrA * parametrC);
+            if(parametrD < 0)
+            {
+                Console.WriteLine("korney net");
+            }
+            else if(parametrD == 0)
+            {
+                Console.WriteLine("Your koren is {0}", new MathLib().GetKorenOdin(parametrB,parametrA,parametrD));
+            }
+            else
+            {
+                Console.WriteLine("Your koren is {0}, and {1}", new MathLib().GetKorenOdin(parametrB, parametrA, parametrD), new MathLib().GetKorenDva(parametrB, parametrA, parametrD));
+            }
+            Console.ReadLine();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class Library
+    public class ConsoleManagment
     {
         public bool GetIntegerInputParamets(out int value)
         {

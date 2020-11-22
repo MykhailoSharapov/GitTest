@@ -37,4 +37,15 @@ namespace Library
             }
         }
     }
+    public class MathLib
+    {
+        public double GetKorenOdin(int b, int a, float d)
+        {
+            return (-b + Math.Sqrt(d)) / (2 * a);
+        }
+        public double GetKorenDva(int b, int a, float d)
+        {
+            return (-b - Math.Sqrt(d)) / (2 * a);
+        }
+    }
 }

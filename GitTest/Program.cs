@@ -10,6 +10,8 @@ namespace GitTest
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Please input parametr A:");
+            
         }
     }
 }
